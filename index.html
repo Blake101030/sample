@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Personalized Greeting</title>
+</head>
+<body>
+
+<h1>Personalized Greeting</h1>
+
+<label for="name">Enter your name:</label>
+<input type="text" id="nameInput">
+<button id="greetButton">Greet</button>
+
+<div id="greetingMessage"></div>
+
+<script>
+  // JavaScript code starts here
+  document.getElementById("greetButton").addEventListener("click", function() {
+    // Get the user's name from the input field
+    var name = document.getElementById("nameInput").value;
+
+    // Check if the name is empty
+    if (name.trim() === "") {
+      alert("Please enter your name.");
+    } else {
+      // Create a personalized greeting message
+      var greetingMessage = "Hello, " + name + "!";
+
+      // Display the greeting message in the "greetingMessage" div
+      document.getElementById("greetingMessage").textContent = greetingMessage;
+    }
+  });
+</script>
+
+</body>
+</html>
